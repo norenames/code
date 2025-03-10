@@ -14,7 +14,7 @@ class RandomComputerPlayer(Player):
         super().__init__(letter)
 
     def get_move(self, game):
-        pass
+        return random.choice(game.available_moves())
 
 class HumanPlayer(Player):
     def __init__(self,letter):
@@ -33,3 +33,4 @@ class HumanPlayer(Player):
             except ValueError:
                 print('Invalid Square. Try again.')
         return val
+    
